@@ -1,44 +1,23 @@
-const title = document.querySelector("#title");
-title.textContent = "Atikur Learning JavaScript DOM Manipulation";
-
-title.style.color = "blue";
-title.style.fontSize = "24px";
-title.style.backgroundColor = "lightgray";
-title.style.padding = "25px";
+const h= document.getElementsByTagName('h1');
+h[0].style.color='green';
 
 
-
-title.classList.toggle("darkMode")
-
-const button = document.querySelector("#btn");
-button.textContent = "Oohh yeah button";
-button.style.padding = "10px 20px";
-button.style.fontSize = "16px";
-button.style.backgroundColor = "red";
-button.style.color = "white";
-
-const list = document.querySelector("#list");
-const items = document.createElement("li");
-items.textContent = "Item 1";
-list.appendChild(items);
+const lovely=document.getElementsByClassName('love');
+for(const love of lovely){
+    love.style.color='green';
+}
 
 
-button.addEventListener("click", function() {
-    button.style.backgroundColor ="green";
-console.log("button was clicked by artikur");})
+let colors=['red','blue','cyan','magenta','yellow','orange','purple','pink','brown','gray'];
 
-const newButt=document.querySelector("#newBtn");
-newButt.addEventListener("click", function(){
-    const backk=document.querySelector("body");
-    backk.style.backgroundColor="yellow";
+const bttn2=document.getElementById('btn2');
+bttn2.style.backgroundColor='cyan';
+bttn2.style.padding='20px';
+bttn2.style.fontWeight='bold';
+bttn2.style.borderRadius='10px';
+const boddy=document.querySelector('body');
+
+bttn2.addEventListener('click',()=>{
+    bttn2.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
+    boddy.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
 })
-
-const thirdButt=document.querySelector("#thirdButt");
-thirdButt.addEventListener("click", (event)=>{
-    console.log("Third button was clicked",event);
-})
-
-
-
-
-
