@@ -21,3 +21,19 @@ bttn2.addEventListener('click',()=>{
     bttn2.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
     boddy.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
 })
+
+
+const eventHand=document.getElementById('event-hand');
+const upFile=document.getElementById('up-file');
+upFile.addEventListener('click',()=>{
+    eventHand.textContent='File Updated Successfully';
+})
+
+const nothingImp=document.getElementById('nothing-imp');
+const inputField=document.getElementById('input-field');
+const updateText=document.getElementById('update-text');
+
+updateText.addEventListener('click',()=>{
+    const inputValue=inputField.value;
+    nothingImp.textContent=inputValue;
+})
